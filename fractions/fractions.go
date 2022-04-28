@@ -6,10 +6,8 @@ type Fraction struct {
 	numerator, denominator int
 }
 
-func Construct(numerator, denominator int) *Fraction {
-	fraction := new(Fraction)
-	fraction.numerator = numerator
-	fraction.denominator = denominator
+func (numerator, denominator int) Fraction {
+	fraction := FracFraction{numerator, denominator}
 	return fraction
 }
 
