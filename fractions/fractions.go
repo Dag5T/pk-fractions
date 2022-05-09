@@ -6,11 +6,16 @@ type Fraction struct {
 	numerator, denominator int
 }
 
-func (numerator, denominator int) Fraction {
-	fraction := FracFraction{numerator, denominator}
+func NewDefault() Fraction {
+	fraction := Fraction{1, 1}
 	return fraction
 }
 
-func (fraction Fraction) Display() {
-	fmt.Printf("%v/%v\n", fraction.numerator, fraction.denominator)
+func New(numerator, denominator int) Fraction {
+	fraction := Fraction{numerator, denominator}
+	return fraction
+}
+
+func (fraction Fraction) Display() string {
+	return fmt.Sprintf("%v/%v", fraction.numerator, fraction.denominator)
 }

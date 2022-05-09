@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	testFraction := fractions.Construct(2, 4)
-	testFraction.Display()
+	testFraction := fractions.NewDefault()
+	fmt.Println(testFraction.Display())
 	fmt.Println("OK")
 }
